@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --element-color: #fff;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+body.dark-mode{
+    --background-color:hsl(260,26%,17%);
+    --text-color:#fff;
+    --element-color:hsl(209,23%,22%);
+}
+.back-btn {
+    padding: 8px 26px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--element-color);
+    color: var(--text-color);
+}
+
+.country-details-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 42px;
+}
+
+.country-details {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 70px;
+    padding-inline: 24px;
+
+}
+
+.country-details img {
+    width: 40%;
+}
+
+.country-content h2 {
+    margin-bottom: 28px;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.other-detiles {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    column-gap: 64px;
+    max-height: 180px;
+}
+
+.other-tags {
+    margin-top: 68px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.other-tags a {
+    padding: 5px 16px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+
+}
+
+@media (max-width:992px) {
+    .country-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .other-detiles {
+        max-height: unset;
+    }
+
+    .country-details img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+
+
+}

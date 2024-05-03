@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --element-color: #fff;
+    --box-shadow-color: rgba(17, 17, 17, 0.1);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark-mode {
+    --background-color: hsl(260, 26%, 17%);
+    --text-color: #fff;
+    --element-color: hsl(209, 23%, 22%);
+    --box-shadow-color: rgba(158, 157, 157, 0.1);
+}
+
+nav {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--element-color);
+}
+
+main {
+    padding: 28px;
+}
+
+a {
+    color: inherit;
+    text-decoration-line: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 28px;
+}
+
+.nav-container p {
+    font-size: 20px;
+}
+
+.text {
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.change-mode {
+    cursor: pointer;
+    box-shadow: 0 0 18px 0 var(--box-shadow-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+}
+
+.search-bar-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 16px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 33px;
+}
+
+.search-bar {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding-left: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--element-color);
+    color: var(--text-color);
+}
+
+.search-bar .search-input {
+    outline: none;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 90%;
+    background-color: inherit;
+    color: inherit;
+}
+
+.search-by-filter {
+    width: 200px;
+    border: none;
+    outline: none;
+    padding: 16px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: var(--element-color);
+    color: var(--text-color);
+
+}
+
+.country-data {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 42px;
+    display: flex;
+    gap: 65px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.country-card {
+    display: inline-block;
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 24px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--element-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.country-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.country-card img {
+    width: 100%;
+}
+
+.content {
+    padding: 24px;
+}
+
+.content .crountry-name {
+    font-size: 28px;
+    padding-bottom: 12px;
+}
+
+@media (max-width:1271px) {
+    .country-data {
+        justify-content: center;
+    }
+}
+
+@media (max-width:955px) {
+    .country-data {
+        justify-content: center;
+    }
+}
+
+@media (max-width:768px) {
+    .country-data {
+        justify-content: center;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .nav-container p {
+        font-size: 12px;
+    }
+
+    .search-bar-container {
+        flex-direction: column;
+    }
+}
